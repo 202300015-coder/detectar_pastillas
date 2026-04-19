@@ -1,0 +1,674 @@
+[
+  {
+    "image_name": "60429-203_M_LH3.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\60429-203_M_LH3.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 378,
+      "h": 197
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "60429-203_M_LH3.jpg",
+        "candidate_index": 1,
+        "x": 206,
+        "y": 19,
+        "w": 160,
+        "h": 161,
+        "area": 19934.5,
+        "aspect_ratio": 0.9938,
+        "circularity": 0.8903,
+        "solidity": 0.992,
+        "fill_ratio": 0.7739,
+        "dominant_color": "WHITE",
+        "second_color": "GREEN",
+        "dominant_ratio": 0.5988,
+        "second_ratio": 0.4214,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "60429-203_M_LH3.jpg",
+        "candidate_index": 2,
+        "x": 4,
+        "y": 16,
+        "w": 163,
+        "h": 161,
+        "area": 19624.5,
+        "aspect_ratio": 1.0124,
+        "circularity": 0.8538,
+        "solidity": 0.9813,
+        "fill_ratio": 0.7478,
+        "dominant_color": "GREEN",
+        "second_color": "WHITE",
+        "dominant_ratio": 0.5619,
+        "second_ratio": 0.4419,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      145.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "317220267.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\317220267.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 480
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "317220267.jpg",
+        "candidate_index": 1,
+        "x": 24,
+        "y": 113,
+        "w": 256,
+        "h": 256,
+        "area": 51098.5,
+        "aspect_ratio": 1.0,
+        "circularity": 0.8971,
+        "solidity": 0.9947,
+        "fill_ratio": 0.7797,
+        "dominant_color": "RED",
+        "second_color": "",
+        "dominant_ratio": 0.9866,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      },
+      {
+        "image_name": "317220267.jpg",
+        "candidate_index": 2,
+        "x": 360,
+        "y": 112,
+        "w": 256,
+        "h": 256,
+        "area": 50899.0,
+        "aspect_ratio": 1.0,
+        "circularity": 0.8949,
+        "solidity": 0.9944,
+        "fill_ratio": 0.7767,
+        "dominant_color": "RED",
+        "second_color": "",
+        "dominant_ratio": 0.9838,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      147.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "634810623.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\634810623.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 640,
+      "h": 480
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "634810623.jpg",
+        "candidate_index": 1,
+        "x": 20,
+        "y": 104,
+        "w": 286,
+        "h": 280,
+        "area": 61854.0,
+        "aspect_ratio": 1.0214,
+        "circularity": 0.891,
+        "solidity": 0.994,
+        "fill_ratio": 0.7724,
+        "dominant_color": "BLUE",
+        "second_color": "",
+        "dominant_ratio": 0.9917,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      },
+      {
+        "image_name": "634810623.jpg",
+        "candidate_index": 2,
+        "x": 329,
+        "y": 109,
+        "w": 286,
+        "h": 277,
+        "area": 61552.5,
+        "aspect_ratio": 1.0325,
+        "circularity": 0.8925,
+        "solidity": 0.9942,
+        "fill_ratio": 0.777,
+        "dominant_color": "BLUE",
+        "second_color": "",
+        "dominant_ratio": 0.9928,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      147.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "blackNyellow_capsule.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\blackNyellow_capsule.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 781
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "blackNyellow_capsule.jpg",
+        "candidate_index": 1,
+        "x": 51,
+        "y": 383,
+        "w": 961,
+        "h": 322,
+        "area": 277040.5,
+        "aspect_ratio": 2.9845,
+        "circularity": 0.6298,
+        "solidity": 0.9881,
+        "fill_ratio": 0.8953,
+        "dominant_color": "BLACK",
+        "second_color": "YELLOW",
+        "dominant_ratio": 0.5049,
+        "second_ratio": 0.4723,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "blackNyellow_capsule.jpg",
+        "candidate_index": 2,
+        "x": 52,
+        "y": 18,
+        "w": 961,
+        "h": 319,
+        "area": 275258.5,
+        "aspect_ratio": 3.0125,
+        "circularity": 0.6209,
+        "solidity": 0.9891,
+        "fill_ratio": 0.8979,
+        "dominant_color": "BLACK",
+        "second_color": "YELLOW",
+        "dominant_ratio": 0.4978,
+        "second_ratio": 0.479,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "bloe_oval.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\bloe_oval.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 781
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "bloe_oval.jpg",
+        "candidate_index": 1,
+        "x": 104,
+        "y": 0,
+        "w": 859,
+        "h": 349,
+        "area": 265705.0,
+        "aspect_ratio": 2.4613,
+        "circularity": 0.704,
+        "solidity": 0.9933,
+        "fill_ratio": 0.8863,
+        "dominant_color": "BLUE",
+        "second_color": "",
+        "dominant_ratio": 0.9845,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      },
+      {
+        "image_name": "bloe_oval.jpg",
+        "candidate_index": 2,
+        "x": 105,
+        "y": 375,
+        "w": 856,
+        "h": 340,
+        "area": 261883.0,
+        "aspect_ratio": 2.5176,
+        "circularity": 0.6982,
+        "solidity": 0.9967,
+        "fill_ratio": 0.8998,
+        "dominant_color": "BLUE",
+        "second_color": "",
+        "dominant_ratio": 0.9943,
+        "second_ratio": 0.0,
+        "is_bicolor": false
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "brown_oval.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\brown_oval.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "brown_oval.jpg",
+        "candidate_index": 1,
+        "x": 257,
+        "y": 0,
+        "w": 553,
+        "h": 350,
+        "area": 155682.0,
+        "aspect_ratio": 1.58,
+        "circularity": 0.8216,
+        "solidity": 0.9934,
+        "fill_ratio": 0.8044,
+        "dominant_color": "BROWN",
+        "second_color": "ORANGE",
+        "dominant_ratio": 0.9901,
+        "second_ratio": 0.912,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "brown_oval.jpg",
+        "candidate_index": 2,
+        "x": 257,
+        "y": 374,
+        "w": 552,
+        "h": 342,
+        "area": 154575.5,
+        "aspect_ratio": 1.614,
+        "circularity": 0.8285,
+        "solidity": 0.9966,
+        "fill_ratio": 0.8188,
+        "dominant_color": "BROWN",
+        "second_color": "ORANGE",
+        "dominant_ratio": 0.9948,
+        "second_ratio": 0.8339,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "cream_capsule.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\cream_capsule.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "candidate_count": 1,
+    "candidates": [
+      {
+        "image_name": "cream_capsule.jpg",
+        "candidate_index": 3,
+        "x": 314,
+        "y": 158,
+        "w": 153,
+        "h": 109,
+        "area": 9123.0,
+        "aspect_ratio": 1.4037,
+        "circularity": 0.3455,
+        "solidity": 0.7183,
+        "fill_ratio": 0.547,
+        "dominant_color": "BLACK",
+        "second_color": "GRAY",
+        "dominant_ratio": 0.5332,
+        "second_ratio": 0.333,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "green_capsule.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\green_capsule.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "green_capsule.jpg",
+        "candidate_index": 1,
+        "x": 73,
+        "y": 0,
+        "w": 919,
+        "h": 348,
+        "area": 284057.5,
+        "aspect_ratio": 2.6408,
+        "circularity": 0.6664,
+        "solidity": 0.9849,
+        "fill_ratio": 0.8882,
+        "dominant_color": "GREEN",
+        "second_color": "BLUE",
+        "dominant_ratio": 0.9843,
+        "second_ratio": 0.2402,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "green_capsule.jpg",
+        "candidate_index": 2,
+        "x": 73,
+        "y": 374,
+        "w": 916,
+        "h": 341,
+        "area": 280834.5,
+        "aspect_ratio": 2.6862,
+        "circularity": 0.6677,
+        "solidity": 0.9904,
+        "fill_ratio": 0.8991,
+        "dominant_color": "GREEN",
+        "second_color": "BLUE",
+        "dominant_ratio": 0.9743,
+        "second_ratio": 0.2041,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  },
+  {
+    "image_name": "green_oval.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\green_oval.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 239,
+      "h": 255
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "green_oval.jpg",
+        "candidate_index": 1,
+        "x": 0,
+        "y": 137,
+        "w": 239,
+        "h": 118,
+        "area": 21265.5,
+        "aspect_ratio": 2.0254,
+        "circularity": 0.5963,
+        "solidity": 0.9389,
+        "fill_ratio": 0.754,
+        "dominant_color": "GRAY",
+        "second_color": "YELLOW",
+        "dominant_ratio": 0.6164,
+        "second_ratio": 0.3259,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "green_oval.jpg",
+        "candidate_index": 2,
+        "x": 0,
+        "y": 0,
+        "w": 239,
+        "h": 108,
+        "area": 19520.0,
+        "aspect_ratio": 2.213,
+        "circularity": 0.4886,
+        "solidity": 0.8908,
+        "fill_ratio": 0.7562,
+        "dominant_color": "GRAY",
+        "second_color": "WHITE",
+        "dominant_ratio": 0.5907,
+        "second_ratio": 0.3485,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      160.0,
+      127.0,
+      130.0
+    ]
+  },
+  {
+    "image_name": "orangeandblue.jpg",
+    "image_path": "C:\\Users\\rodri\\PycharmProjects\\Referencia de proyecto de pastillas\\pills\\orangeandblue.jpg",
+    "print_bbox": {
+      "x": 0,
+      "y": 0,
+      "w": 1024,
+      "h": 768
+    },
+    "candidate_count": 2,
+    "candidates": [
+      {
+        "image_name": "orangeandblue.jpg",
+        "candidate_index": 1,
+        "x": 55,
+        "y": 12,
+        "w": 969,
+        "h": 337,
+        "area": 289271.0,
+        "aspect_ratio": 2.8754,
+        "circularity": 0.6451,
+        "solidity": 0.9899,
+        "fill_ratio": 0.8858,
+        "dominant_color": "BLUE",
+        "second_color": "RED",
+        "dominant_ratio": 0.5024,
+        "second_ratio": 0.4918,
+        "is_bicolor": true
+      },
+      {
+        "image_name": "orangeandblue.jpg",
+        "candidate_index": 2,
+        "x": 63,
+        "y": 377,
+        "w": 941,
+        "h": 335,
+        "area": 282605.5,
+        "aspect_ratio": 2.809,
+        "circularity": 0.6557,
+        "solidity": 0.9912,
+        "fill_ratio": 0.8965,
+        "dominant_color": "BLUE",
+        "second_color": "RED",
+        "dominant_ratio": 0.5131,
+        "second_ratio": 0.4815,
+        "is_bicolor": true
+      }
+    ],
+    "settings": {
+      "white_l_min": 190,
+      "white_sat_max": 45,
+      "distance_thresholds": [
+        18.0,
+        22.0,
+        26.0,
+        30.0
+      ],
+      "min_area_ratio": 0.01,
+      "max_area_ratio": 0.6,
+      "min_fill_ratio": 0.45,
+      "min_solidity": 0.7,
+      "resize_max_side": 1200
+    },
+    "background_lab": [
+      127.0,
+      128.0,
+      128.0
+    ]
+  }
+]

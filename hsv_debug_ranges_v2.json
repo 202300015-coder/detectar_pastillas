@@ -1,0 +1,232 @@
+{
+  "blackNyellow_capsule": {
+    "BLACK": {
+      "lower": [
+        0,
+        0,
+        0
+      ],
+      "upper": [
+        179,
+        255,
+        72
+      ],
+      "open": 1,
+      "close": 1
+    },
+    "YELLOW": {
+      "lower": [
+        16,
+        60,
+        81
+      ],
+      "upper": [
+        38,
+        251,
+        255
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "cream_capsule": {
+    "GRAY": {
+      "lower": [
+        63,
+        0,
+        82
+      ],
+      "upper": [
+        179,
+        26,
+        205
+      ],
+      "open": 1,
+      "close": 3
+    },
+    "BROWN": {
+      "lower": [
+        16,
+        28,
+        30
+      ],
+      "upper": [
+        20,
+        95,
+        210
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "green_capsule": {
+    "GREEN": {
+      "lower": [
+        71,
+        25,
+        47
+      ],
+      "upper": [
+        88,
+        255,
+        255
+      ],
+      "open": 1,
+      "close": 1
+    },
+    "BLUE": {
+      "lower": [
+        56,
+        45,
+        50
+      ],
+      "upper": [
+        135,
+        255,
+        255
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "orangeandblue": {
+    "ORANGE": {
+      "lower": [
+        0,
+        70,
+        158
+      ],
+      "upper": [
+        25,
+        251,
+        255
+      ],
+      "open": 2,
+      "close": 1
+    },
+    "BLUE": {
+      "lower": [
+        85,
+        45,
+        50
+      ],
+      "upper": [
+        135,
+        255,
+        255
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "60429-203_M_LH3": {
+    "GRAY": {
+      "lower": [
+        18,
+        0,
+        146
+      ],
+      "upper": [
+        145,
+        235,
+        255
+      ],
+      "open": 1,
+      "close": 6
+    },
+    "GREEN": {
+      "lower": [
+        35,
+        45,
+        60
+      ],
+      "upper": [
+        85,
+        255,
+        255
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "317220267": {
+    "RED": {
+      "lower": [
+        3,
+        25,
+        49
+      ],
+      "upper": [
+        179,
+        255,
+        255
+      ],
+      "open": 0,
+      "close": 4
+    }
+  },
+  "634810623": {
+    "BLUE": {
+      "lower": [
+        85,
+        45,
+        50
+      ],
+      "upper": [
+        135,
+        255,
+        255
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "bloe_oval": {
+    "BLUE": {
+      "lower": [
+        85,
+        80,
+        49
+      ],
+      "upper": [
+        144,
+        235,
+        141
+      ],
+      "open": 1,
+      "close": 2
+    }
+  },
+  "brown_oval": {
+    "BROWN": {
+      "lower": [
+        0,
+        13,
+        118
+      ],
+      "upper": [
+        179,
+        255,
+        255
+      ],
+      "open": 0,
+      "close": 2
+    }
+  },
+  "green_oval": {
+    "GREEN": {
+      "lower": [
+        0,
+        42,
+        61
+      ],
+      "upper": [
+        40,
+        126,
+        217
+      ],
+      "open": 1,
+      "close": 3
+    }
+  }
+}
