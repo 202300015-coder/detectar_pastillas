@@ -1,45 +1,116 @@
-# Drug Wizard: Your Pill Identifier and Companion
+# Logica de `detectar_pastillas.ipynb`
 
-### Inspiration: 
+Este README documenta solo la logica del notebook `detectar_pastillas.ipynb`.
 
-The biggest inspiration for our project was to improve medication safety. 131 million or 66% of U.S. adults take prescription drugs and more than 530,000 injuries occur annually in outpatient clinics due to medication errors. Drug Wizard is designed to help individuals, clinicians, caretakers, and more to ensure that the correct medication is provided as well as at the right dosage. Reducing the risk of medication errors was also personal to us and our group. One of our members erroneously took the wrong medication and almost endured a serious injury because of it. Overall, we just wanted to have a positive healthcare impact for individuals and healthcare professionals alike.
+## 1. Flujo general
 
-### What it does: 
+En cada frame de camara el pipeline hace:
+1. Define una ROI central.
+2. Estima el color del fondo (papel) con las 4 esquinas de la ROI.
+3. Segmenta el objeto por distancia de color al fondo (en LAB).
+4. Filtra contornos y elige el candidato principal.
+5. Clasifica forma.
+6. Clasifica color (mono o bicolor).
+7. Asigna marca segun reglas.
+8. Dibuja resultados en overlay.
 
-Our app allows the user to upload an image of their unidentified pill. The pill is identified based on color, shape and text. Those fields are then ran through the National Library of Medicine’s ‘pillbox’ data set to find any matches. The top matches will be shown to the user.
+## 2. Parametros clave
 
-### How we built it:
+- `CAM_INDEX`: camara a usar.
+- `ROI_W`, `ROI_H`: tamano relativo de ROI.
+- `MIN_AREA_FLOOR`, `MIN_AREA_RATIO`: piso de area para descartar ruido.
+- `INTERNAL_EDGE_CANNY_LOW/HIGH`: sensibilidad de bordes internos.
+- `INTERNAL_EDGE_DENSITY_THRESHOLD`: umbral para activar logica bicolor.
+- `SHAPE_NAMES`: `desconocida`, `circular`, `capleta`, `pastilla`.
 
-We started off using Open CV to contour the pills based on color. Color ranges were set using Hue Saturation Value (HSV) color model, and then masks were created of the image. Using these masks, a contour could be created. By checking the contour area by color, we could determine which color the pill was. The contour also allowed us to determine the shape based on the amount of approximated edges. We then used pandas to manipulate the ‘pillbox’ data set to find any matches. We used streamlit framework to allow for file uploading for the user. We also integrated Google's cloud vision API in order to extract text from the pill engravings. Furthemore, we connected OpenFDA's API in order to get drug interactions based on what we determined the pill to be, and added a web scraper to garner relevant search results given the text interpreted off of the pill.
+## 3. Segmentacion del objeto
 
-### Challenges we ran into:
+1. Convierte ROI a LAB.
+2. Calcula la distancia por pixel entre ROI y el color estimado de papel.
+3. Aplica Otsu + ajuste y mascara binaria.
+4. Limpia con morfologia (`OPEN`, `CLOSE`).
+5. Erosiona (`mask_sep`) para separar objetos cercanos.
 
-Developing our app was both exciting and challenging, mainly because we encountered a lot of new technologies. Another constraint shared by many was time management. Because the Pitt Challenge was limited to only 42 hours, trying to create a fully functioning prototype by cobbling together a variety of Python modules was an experience, to say the least. Our string manipulation of data garnered from Google's vision API isn't perfect, although could be perfected with a little more time. Furthermore, we ran into issues with scheduled maintenance for key databases and API access when we really needed them which was frustrating. OpenFDA's API was also difficult to get started with, but we look to improve on this as well.
+## 4. Seleccion de contorno principal
 
-### Accomplishments that we're proud of:
+Los contornos se filtran por:
+- area minima,
+- relacion de relleno,
+- aspecto extremo,
+- toque de borde (para evitar blobs enormes pegados al marco).
 
-Being able to create masks and contours of the pills was one of our first big milestones. It was the first moment when we were like “Oh... We can actually do this.“ We are still only able to use a localhost for Streamlit, but getting that working with little prior app development felt good. Also implementing Google's vision API was a sigh of relief after attempting OCRs and a neural network. All in all, it just feels good to come away with a completed project, as most of our team has never done a hackathon before.
+Si hay dos contornos principales compatibles, los une en un solo objeto (`convexHull`) para manejar pastillas partidas visualmente.
 
-### What we learned
+Si no hay fusion, elige el mejor por score:
+- mayor area normalizada,
+- cercania al centro,
+- penalizacion por tamano excesivo.
 
-Working through the project, we received a variety of valuable learning experiences and skills. Firstly, we learned about how to assemble a project. It was one of our first experiences with live coding in Github, and although it's messy, we came away unscathed. We also came away with a better understanding of pixel values in images to create the color hues. Open CV made it really easy to take those to a mask, and learning about computer vision was a new topic for all of us. We also learned about the implementation of APIs, and how simple and useful the calls can be.
+## 5. Clasificacion de forma
 
-### What’s next for Drug Wizard?
+Sobre el contorno final calcula:
+- `circularity = 4*pi*area / perimetro^2`
+- `aspect` con `minAreaRect`.
 
-Currently, our main focus on how to move forward with Drug Wizard is to enhance accuracy, usability, and features. The project is still very young and could greatly benefit from some refinement. To refine the search, we need to add more color values and more shapes and have better string manipulation to search. The regex we used to find the imprint in the data frame sometimes was one letter, such as O, which would cause an influx of applicable pills. After refining the search itself, the next step would be market research to determine the demand for the app and what features would be best to implement.  We also want to get our OpenFDA API working to gather pill interactions to provide warnings to the user. An application to solely identify pills could be useful, but adding significant features such as gathering allergy information from a barcode scan of a food item could really improve the app’s potential commercialization. 
+Con reglas geometricas asigna:
+- `circular`
+- `capleta`
+- `pastilla`
+- `desconocida`
 
-Built with:
-Python3
-OpenCV
-Numpy
-Pillow
-Pytesseract
-Matplotlib.pyplot
-Pandas
-Beautiful Soup
-Requests
-Jupyter
-Streamlit
-Google Cloud Vision API
-TempFiles
-Time
+Tambien aplica ajustes de correccion para reducir cambios inestables entre clases.
+
+## 6. Clasificacion de color
+
+1. Convierte ROI a HSV.
+2. Toma mascara interna del objeto para evitar contaminar con bordes.
+3. Clasifica pixeles con `classify_hsv_pixels()` usando `COLOR_RANGOS` y `COLOR_ORDER`.
+4. Obtiene color dominante por conteo.
+5. Usa `classify_hsv_scalar()` como fallback robusto con el color central.
+
+Resultado:
+- `primary_color`
+- `secondary_color` (si aplica)
+- `is_bicolor`
+
+## 7. Deteccion bicolor
+
+Solo intenta bicolor cuando:
+- la forma es `pastilla` o `capleta`,
+- y el objeto tiene aspecto alargado o suficiente borde interno.
+
+Proceso:
+1. Divide la mascara interna en 2 mitades.
+2. Clasifica color por cada mitad.
+3. Verifica proporciones minimas por lado.
+4. Si ambas mitades son validas y de colores distintos, marca bicolor y fuerza `shape_label = 'pastilla'`.
+
+## 8. Reglas de marca
+
+Funcion: `infer_brand(shape_label, primary_color, secondary_color, is_bicolor)`.
+
+Reglas actuales:
+- `pastilla` + `naranja/amarillo` -> `Teva Pharmaceuticals USA`
+- `pastilla` + `azul/naranja` -> `Alembic Pharmaceuticals`
+- `negro/amarillo` -> `Zydus Pharmaceuticals`
+- `circular` + `rojo` -> `Glaxo SmithKline`
+- `circular` + `azul` -> `Glaxo SmithKline`
+- `capleta` + `azul` -> `Glaxo SmithKline`
+- `capleta` + `cafe` -> `Heritage Pharmaceuticals`
+- `circular` + (`cafe` o `rojo` o `naranja`) -> `Cipla USA Inc.`
+
+Nota: la regla `circular + rojo -> Glaxo SmithKline` esta antes que la regla general de `Cipla` para resolver conflicto.
+
+## 9. Salida visual en tiempo real
+
+En `roi_result` se dibuja:
+- contorno y caja del objeto,
+- `color | forma | tamano`,
+- `Marca: ...` (si hay match),
+- metricas (`H,S,V`, densidad de borde interno y relacion de area).
+
+Ventanas de debug activas:
+- `camera`
+- `roi_result`
+
+Se sale del loop con tecla `q`.
